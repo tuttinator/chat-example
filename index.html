@@ -28,6 +28,10 @@
         return false;
       });
       socket.on('chat message', function(msg){
+        console.log(msg);
+        if(msg === 'rick-roll') {
+          window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+        }
         $('#messages').append($('<li>').text(msg));
       });
     </script>
